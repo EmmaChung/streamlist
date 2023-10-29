@@ -93,7 +93,7 @@ if __name__ == "__main__":
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(), override=True)
 
-url = 'https://github.com/EmmaChung/streamlist/blob/main/img.png'
+url = 'https://github.com/EmmaChung/streamlist/blob/72a576fe89707d4d3862736df41d3238f09a3ce1/img.png'
 image_url = Image.open(url)
 st.image(image_url, caption='OpenAI')
 
