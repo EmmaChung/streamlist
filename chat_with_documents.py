@@ -13,6 +13,10 @@ import streamlit as st
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 
+from PIL import Image
+import glob
+
+
 # loading PDF, DOCX and TXT files as LangChain Documents
 def load_document(file):
     import os
@@ -89,7 +93,13 @@ if __name__ == "__main__":
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(), override=True)
 
-st.image('img.png')
+images = glob.glob("C:\Users\chili\Desktop\Emma\python\streamlist\img.png")
+index= st.number_input('Index')
+
+
+image = Image.open(images[index])
+st.image(image, use_column_width=True)
+#st.image('img.png')
 st.subheader('LLM Question-Answering Application 🤖')
 with st.sidebar:
 # text_input for the OpenAI API key (alternative to python-dotenv and .env)
