@@ -93,7 +93,7 @@ if __name__ == "__main__":
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(), override=True)
 
-images = glob.glob("C:\Users\chili\Desktop\Emma\python\streamlist\img.png")
+images = glob.glob("C:\\Users\\chili\\Desktop\\Emma\\python\\streamlist\\img.png")
 index= st.number_input('Index')
 
 
