@@ -95,7 +95,13 @@ load_dotenv(find_dotenv(), override=True)
 
 images = glob.glob("C:\\Users\\chili\\Desktop\\Emma\\python\\streamlist\\img.png")
 index= st.number_input('Index')
+   if st.button('Next'):
+    index+=1
 
+
+if st.button('Prev'):
+    if index > 0
+        index = index -1
 
 image = Image.open(images[index])
 st.image(image, use_column_width=True)
